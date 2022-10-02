@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="root" prefHeight="635.0" prefWidth="1088.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <Label layoutX="340.0" layoutY="14.0" text="Sipsewana Institute">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="iconStudent" fitHeight="173.0" fitWidth="200.0" layoutX="102.0" layoutY="209.0" onMouseClicked="#navigateOnClicked" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/student.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconProgram" fitHeight="173.0" fitWidth="200.0" layoutX="458.0" layoutY="209.0" onMouseClicked="#navigateOnClicked" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/course.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconReport" fitHeight="173.0" fitWidth="200.0" layoutX="805.0" layoutY="209.0" onMouseClicked="#navigateOnClicked" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/report.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="77.0" layoutY="406.0" prefHeight="53.0" prefWidth="936.0" text="Sipsewana Institute">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <effect>
+            <DropShadow color="#00fff6" />
+         </effect>
+      </Label>
+      <Label fx:id="lblDescription" alignment="CENTER" layoutX="41.0" layoutY="501.0" prefHeight="20.0" prefWidth="1008.0" text="Please select one">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

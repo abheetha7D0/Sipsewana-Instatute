@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="studentContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #ccc3fa;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageStudentsFormController">
+   <children>
+      <BorderPane layoutX="208.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="87.0" prefWidth="1280.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="180.0" layoutY="5.0" prefHeight="63.0" prefWidth="921.0" text="Manage Students" textFill="#2f37d0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="179.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font name="Leelawadee UI" size="47.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDate" alignment="CENTER" layoutX="1089.0" layoutY="14.0" prefHeight="59.0" prefWidth="177.0" text="2022/01/01">
+                     <font>
+                        <Font name="Ebrima Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="73.0" fitWidth="89.0" layoutX="8.0" layoutY="7.0" onMouseClicked="#navigateToDashBoard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/back.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="607.0" prefWidth="962.0" style="-fx-background-color: #ccc3fa;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="5.0" layoutY="145.0" prefHeight="481.0" prefWidth="423.0" style="-fx-border-color: white;" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="852.0">
+                     <children>
+                        <VBox prefHeight="395.0" prefWidth="395.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                           <children>
+                              <JFXComboBox fx:id="cmbStudentId" labelFloat="true"  prefHeight="50.0" prefWidth="397.0" promptText="Student ID">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXComboBox>
+                              <JFXTextField fx:id="txtStudentNames" editable="false" labelFloat="true" layoutX="10.0" layoutY="110.0" prefHeight="45.0" prefWidth="190.0" promptText="Student Name">
+                                 <font>
+                                    <Font name="Calibri Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXComboBox fx:id="cmbProgramId" labelFloat="true"  prefHeight="50.0" prefWidth="501.0" promptText="Program ID">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXComboBox>
+                              <JFXTextField fx:id="txtDuration" editable="false" labelFloat="true" prefHeight="45.0" prefWidth="190.0" promptText="Duration">
+                                 <font>
+                                    <Font name="Calibri Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtProgramFee" editable="false" labelFloat="true" prefHeight="45.0" prefWidth="190.0" promptText="Program Fee">
+                                 <font>
+                                    <Font name="Calibri Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtProgramName" editable="false" labelFloat="true" prefHeight="45.0" prefWidth="190.0" promptText="Program Name">
+                                 <font>
+                                    <Font name="Calibri Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </VBox>
+                        <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="411.0" onMouseClicked="#saveStudentProgram" prefHeight="57.0" prefWidth="172.0" style="-fx-background-color: #00ff95;" text="Save">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="213.0" layoutY="410.0" onMouseClicked="#deleteStudent" prefHeight="58.0" prefWidth="164.0" style="-fx-background-color: #b10000;" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="4.0" layoutY="1.0" prefHeight="122.0" prefWidth="1055.0" style="-fx-border-color: white; -fx-border-width: 3;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                     <children>
+                        <HBox prefHeight="117.0" prefWidth="1050.0" spacing="10.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                           <children>
+                              <JFXTextField fx:id="txtStudentId" labelFloat="true" prefHeight="35.0" prefWidth="101.0" promptText="Student ID">
+                                 <font>
+                                    <Font name="Calibri Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtStudentName" labelFloat="true" prefHeight="36.0" prefWidth="255.0" promptText="Student Name">
+                                 <font>
+                                    <Font name="Calibri Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtAddress" labelFloat="true" prefHeight="35.0" prefWidth="247.0" promptText="Address">
+                                 <font>
+                                    <Font name="Calibri Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtContactNumber" labelFloat="true" prefHeight="31.0" prefWidth="145.0" promptText="Contact Number">
+                                 <font>
+                                    <Font name="Calibri Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <JFXButton buttonType="RAISED" onMouseClicked="#saveStudent" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: #00ff95;" text="Save">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="30.0" left="10.0" right="10.0" top="30.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" onMouseClicked="#deleteStudent" prefHeight="40.0" prefWidth="92.0" style="-fx-background-color: b10000;" text="Delete" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="30.0" left="10.0" right="10.0" top="30.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" onMouseClicked="#updateStudent" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: yellow;" text="Update">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="30.0" left="10.0" right="10.0" top="30.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="428.0" layoutY="145.0" prefHeight="482.0" prefWidth="642.0" style="-fx-border-color: white; -fx-border-width: 2;" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="428.0" AnchorPane.rightAnchor="12.0">
+                     <children>
+                        <TableView fx:id="tblStudent" layoutX="14.0" layoutY="34.0" onMouseClicked="#getSelected" prefHeight="438.0" prefWidth="816.0" stylesheets="@styles/table2.css" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="32.0">
+                          <columns>
+                            <TableColumn fx:id="colId" prefWidth="124.0" text="Student ID" />
+                            <TableColumn fx:id="colName" prefWidth="231.0" text="Student Name" />
+                              <TableColumn fx:id="colAddress" prefWidth="259.0" text="Address" />
+                              <TableColumn fx:id="colContactNo" prefWidth="201.0" text="Contact Number" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

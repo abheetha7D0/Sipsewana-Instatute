@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="reportContext" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsFormController">
+   <children>
+      <BorderPane layoutX="148.0" layoutY="115.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="87.0" prefWidth="1280.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="lblDate" alignment="CENTER" layoutX="1192.0" layoutY="35.0" prefHeight="59.0" prefWidth="177.0" text="2022/01/01" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="Ebrima Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="500.0" layoutY="10.0" prefHeight="63.0" prefWidth="297.0" text="Reports" textFill="#2f37d0" underline="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="Berlin Sans FB" size="47.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="76.0" fitWidth="97.0" layoutX="7.0" layoutY="6.0" onMouseClicked="#navigateToDashBoard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/back.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+             
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ccc3fa;" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tblReports" layoutX="14.0" layoutY="30.0" prefHeight="574.0" prefWidth="866.0" stylesheets="@styles/table2.css" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="400.0">
+                    <columns>
+                      <TableColumn fx:id="colId" prefWidth="124.00000953674316" text="Student ID" />
+                      <TableColumn fx:id="colName" prefWidth="437.0" text="Student Name" />
+                        <TableColumn fx:id="colAddress" prefWidth="303.0" text="Reg Date" />
+                    </columns>
+                  </TableView>
+                  <AnchorPane layoutX="902.0" layoutY="40.0" prefHeight="528.0" prefWidth="364.0" style="-fx-border-color: white;" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="902.0" AnchorPane.topAnchor="40.0">
+                     <children>
+                        <VBox layoutX="21.0" layoutY="21.0" prefHeight="496.0" prefWidth="330.0" spacing="30.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="17.0">
+                           <children>
+                              <JFXComboBox fx:id="cmbProgramId" labelFloat="true"  prefHeight="47.0" prefWidth="308.0" promptText="Program ID">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXComboBox>
+                              <JFXTextField fx:id="txtDuration" editable="false" labelFloat="true" prefHeight="44.0" prefWidth="308.0" promptText="Duration">
+                                 <font>
+                                    <Font name="Calibri Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtProgramFee" editable="false" labelFloat="true" prefHeight="44.0" prefWidth="308.0" promptText="Program Fee">
+                                 <font>
+                                    <Font name="Calibri Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtProgramName" editable="false" labelFloat="true" prefHeight="46.0" prefWidth="308.0" promptText="Program Name">
+                                 <font>
+                                    <Font name="Calibri Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
